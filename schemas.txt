@@ -1,0 +1,123 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "required": [
+        "ed25519-identity"
+    ],
+    "type": "object",
+    "properties": {
+        "ed25519-identity": {
+            "type": "string"
+        }
+    },
+    "additionalProperties": true
+}
+
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "required": [
+    "publicKey",
+    "name",
+    "status",
+    "bio",
+    "profilePicHash",
+    "coverPicHash",
+    "interests",
+    "socials",
+    "goal",
+    "packages"
+  ],
+  "properties": {
+    "bio": {
+      "type": "string"
+    },
+    "goal": {
+      "type": "integer"
+    },
+    "publicKey": {
+      "type": "string",
+      "default": ""
+    },
+    "name": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "socials": {
+      "type": "object",
+      "required": [
+        "twitter",
+        "instagram",
+        "youtube",
+        "facebook",
+        "linkedin",
+        "website",
+        "other"
+      ],
+      "properties": {
+        "other": {
+          "type": "string"
+        },
+        "twitter": {
+          "type": "string"
+        },
+        "website": {
+          "type": "string"
+        },
+        "youtube": {
+          "type": "string"
+        },
+        "facebook": {
+          "type": "string"
+        },
+        "linkedin": {
+          "type": "string"
+        },
+        "instagram": {
+          "type": "string"
+        }
+      }
+    },
+    "packages": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "required": [
+            "name",
+            "amount"
+          ],
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "amount": {
+              "type": "integer"
+            }
+          }
+        }
+      ]
+    },
+    "interests": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "coverPicHash": {
+      "type": "string"
+    },
+    "profilePicHash": {
+      "type": "string"
+    }
+  }
+}

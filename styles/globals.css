@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+html {
+  @apply text-gray-900;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #faf9f9;
+}
+
+.h-80per {
+    height: 80vh;
+}
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
